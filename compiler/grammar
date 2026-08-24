@@ -1,0 +1,76 @@
+Programe
+    -> declaration
+
+Declaration 
+    -> Variable_declaration
+    -> Expression_Statement
+    -> Block Statement
+    -> If_Statement
+
+
+Variable_declaration
+     "int" "identifier" (= Expression);
+
+Block Statement
+      -> { (declaration) }
+     
+Expression_Statement
+    → expression ;
+
+If_Statement
+    -> "if" "(expression)" "Statement" (else "(If_Statement | blockStatement)")
+
+While_Statement
+    -> "while" "(expression)" "blockStatement"
+
+Return_Statement
+    -> "return" (expression)? ;
+
+Function_Statement
+    -> "int" "identifier" "((int identifer),*) "blockStatement"
+
+Expression 
+    -> Assignment
+
+Assignment
+    → BitwiseOr ("=" Assignment )
+
+LogicalOR
+    -> LogicalAnd ("||" LogicalAnd)*
+
+LogicalAnd
+    -> NotEqual ("&&" NotEqual)*
+
+NotEqual
+    -> BitwiseOr ("!=" BitwiseOr)*
+
+BitwiseOr
+    → BitwiseXor ( "|" BitwiseXor )*
+
+BitwiseXor
+    → BitwiseAnd ( "^" BitwiseAnd )*
+
+BitwiseAnd
+    → Equality ( "&" Equality )*
+
+Equality
+    → Relational ( "==" Relational )*
+
+Relational
+    → Shift ( ("<" | "<=" | ">" | ">=") Shift )*
+
+Shift
+    → Additive ( ("<<" | ">>") Additive )*
+
+Additive
+    → Multiplicative ( ("+" | "-") Multiplicative )*
+
+Multiplicative
+    → Primary ( ("*" | "/" | "%") Primary )*
+
+Primary
+    → Number
+    | char
+    | bool
+    | Identifier (parameters)
+    | "(" Expression ")"
