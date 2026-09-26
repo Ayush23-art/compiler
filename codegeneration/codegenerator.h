@@ -1,7 +1,7 @@
 #pragma once
 #include <iostream>
-#include </Users/shyampremi/Desktop/project/compiler/parser_dir/parser.h>
-#include </Users/shyampremi/Desktop/project/compiler/semantic_analyzer/semanticanalyzer.h>
+#include <compiler/parser_dir/parser.h>
+#include <compiler/semantic_analyzer/semanticanalyzer.h>
 #include <llvm/IR/LLVMContext.h>
 #include <llvm/IR/IRBuilder.h>
 #include <llvm/IR/Module.h>
