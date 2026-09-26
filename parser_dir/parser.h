@@ -1,8 +1,8 @@
 #pragma once
 
-#include </Users/shyampremi/Desktop/project/compiler/lexer_dir/Token.h>
-#include </Users/shyampremi/Desktop/project/compiler/lexer_dir/lexer.h>
-#include </Users/shyampremi/Desktop/project/compiler/semantic_analyzer/datatype.h>
+#include </compiler/lexer_dir/Token.h>
+#include </compiler/lexer_dir/lexer.h>
+#include </compiler/semantic_analyzer/datatype.h>
 #include <iostream>
 #include <vector>
 #include <fstream>
