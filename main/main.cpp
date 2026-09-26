@@ -2,15 +2,15 @@
 #include <fstream>
 #include <iterator>
 #include <string>
-#include </Users/shyampremi/Desktop/project/compiler/semantic_analyzer/datatype.h>
-#include </Users/shyampremi/Desktop/project/compiler/semantic_analyzer/semanticanalyzer.h>
-#include </Users/shyampremi/Desktop/project/compiler/parser_dir/parser.h>
-#include </Users/shyampremi/Desktop/project/compiler/lexer_dir/Token.h>
-#include </Users/shyampremi/Desktop/project/compiler/lexer_dir/lexer.h>
-#include </Users/shyampremi/Desktop/project/compiler/codegeneration/codegenerator.h>
+#include </compiler/semantic_analyzer/datatype.h>
+#include </compiler/semantic_analyzer/semanticanalyzer.h>
+#include </compiler/parser_dir/parser.h>
+#include </compiler/lexer_dir/Token.h>
+#include </compiler/lexer_dir/lexer.h>
+#include </compiler/codegeneration/codegenerator.h>
 using namespace std;
 int main(){
-    ifstream file("/Users/shyampremi/Desktop/project/compiler/main/test.txt");
+    ifstream file("/compiler/main/test.txt");
     string source{
         istreambuf_iterator<char>(file),
         istreambuf_iterator<char>()
