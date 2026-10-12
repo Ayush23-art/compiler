@@ -1,9 +1,7 @@
 #!/bin/bash
 
-clang++ \
--std=c++17 \
--I/opt/homebrew/Cellar/llvm/22.1.8/include \
-./main/main.cpp \
--L/opt/homebrew/Cellar/llvm/22.1.8/lib \
--lLLVM-22 \
--o compiler
+clang++ -std=c++17 -fexceptions \
+    -I/usr/lib/llvm-21/include \
+    main.cpp \
+    $(llvm-config-21 --ldflags --system-libs --libs all) \
+    -o compiler
